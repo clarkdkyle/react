@@ -1,15 +1,29 @@
-import React from 'react';
-import Article from '../Components/Article';
+import React, { useState, useEffect } from 'react';
 
-function Sports() {
+export default function Sports() {
+    const [sports, setSports] = useState([]);
+
+    const SPORTS_URL = "http://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=b20b0c325ae347edae7223c1f4f79f22";
+
+    useEffect(() => {
+      fetch(SPORTS_URL)
+      .then(raw => raw.json())
+      .then(res => {setSports(res.articles)})
+
+ 
+    }, []) 
+    console.log(sports);
+
+
     return (
-        <div>
-            <h1>Sports News goes here: </h1>
-            <Article/>
-            <Article/>
-            <Article/>
+        <div className="View-div">
+            <ol>
+           {sports.map((sports, index) => (
+             <li key={index}>
+                 <a href={sports.url}>{sports.title}</a>
+             </li>  
+           ))}
+           </ol>
         </div>
     )
 }
-
-export default Sports;
