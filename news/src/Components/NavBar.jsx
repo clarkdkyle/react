@@ -1,15 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function NavBar() {
     return (
-        <nav>
+        <nav className='nav-Bar'>
             <h1>TEK News</h1>
-            <span>Add your &lt;Link/&gt;'s to the Pages Here in the NavBar</span>
-            <p>You will need to use React Router's Navigation system as opposed to 'a' tags to achieve proper client side routing</p>
             <ul>
-                <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Sports</a></li>
-                <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Weather</a></li>
-                <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Politics</a></li>
+                <li><Link to="/" className="NavBar" >Home</Link></li>
+                <li><Link to="/Sports" className="NavBar" >Sports</Link></li>
+                <li><Link to="/Business" className="NavBar" >Business</Link></li>
+                <li><Link to="/Entertainment" className="NavBar" >Entertainment</Link></li>
             </ul>
         </nav>
     )

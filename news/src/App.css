@@ -2,9 +2,6 @@
   text-align: center;
 }
 
-nav {
-  border-bottom: 10px solid orange;
-}
 
 ul {
   display : flex;
@@ -12,13 +9,14 @@ ul {
 }
 
 a {
-  color : orange;
+  color : rgb(48, 46, 44);
   text-decoration: none;
 }
 
 
 li {
   list-style: none;
+  text-align: left;
 }
 
 .App-logo {
@@ -34,14 +32,14 @@ li {
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #cec9c9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(100, 173, 241);
 }
 
 .App-link {
@@ -55,4 +53,14 @@ li {
   to {
     transform: rotate(360deg);
   }
+}
+
+.newsLink {
+  margin-bottom: 100px;
+  padding: 10px;
+  text-align: left;
+}
+
+.NavBar {
+  padding: 10px;
 }
